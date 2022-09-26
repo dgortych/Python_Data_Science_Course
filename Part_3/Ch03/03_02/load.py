@@ -7,7 +7,7 @@ csv_file = Path('track.csv')
 csv_file.stat().st_size / kb
 
 # %%
-!ls -lh $csv_file
+%ls -lh $csv_file
 
 # %% First few lines & line count
 count = 0
@@ -36,3 +36,4 @@ df.columns
 df.info()
 # %%
 df.describe()
+# %%

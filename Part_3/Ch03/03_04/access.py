@@ -3,7 +3,7 @@ import pandas as pd
 
 csv_file = 'track.csv'
 df = pd.read_csv(csv_file, parse_dates=['time'])
-
+df
 # %%
 df['lat']
 
@@ -66,3 +66,5 @@ df.loc['2015-08-20 03:48:34']
 # %%
 
 df.loc['2015-08-20 03:48']
+
+# %%

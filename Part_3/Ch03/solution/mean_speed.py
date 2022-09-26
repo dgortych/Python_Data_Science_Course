@@ -10,7 +10,7 @@ time_cols = [
     'tpep_dropoff_datetime',
 ]
 
-df = pd.read_csv('taxi.csv', parse_dates=time_cols)
+df = data = pd.read_parquet(r'D:\Projekty Python\Kurs_Linkedin_Python_for_Data_science\Part_3\Ch03\challenge\taxi.parquet', engine='pyarrow')
 
 times = df['tpep_dropoff_datetime'] - df['tpep_pickup_datetime']
 times_hour = times / pd.Timedelta(1, 'hour')

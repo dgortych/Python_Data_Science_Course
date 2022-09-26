@@ -23,7 +23,9 @@ if v:
 v.prod()
 
 # %%
-v.sum(axis=1)
+xd = np.array([1,2,3,15])
+print (xd.prod() )
+xd.sum()
 
 # %%
 v.sum(axis=0)
@@ -32,3 +34,4 @@ v.sum(axis=0)
 v1 = v.copy()
 v1[0,0] = -1
 v
+# %%

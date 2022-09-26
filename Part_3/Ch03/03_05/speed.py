@@ -56,3 +56,19 @@ times_hour[:5]
 # %%
 speed = dist / times_hour
 speed[:5]
+
+# %%
+import pandas as pd
+
+csv_file = 'track.csv'
+df = pd.read_csv(csv_file, parse_dates=['time'])
+df
+
+
+# %%
+df['dist'] = 0;
+for idx in range(len(df)-1):
+    df["dist"][idx+1] = distance(df['lat'][idx],df['lng'][idx],df['lat'][idx+1],df['lng'][idx+1])
+df
+# %%
+df
